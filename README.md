@@ -1,3 +1,3 @@
 microBioLect v0.0.1
 
-Developers version packaging
+Early Version Terminal Tool (Docker Version coming soon!)
