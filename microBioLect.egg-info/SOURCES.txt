@@ -1,0 +1,6 @@
+README.md
+setup.py
+microBioLect.egg-info/PKG-INFO
+microBioLect.egg-info/SOURCES.txt
+microBioLect.egg-info/dependency_links.txt
+microBioLect.egg-info/top_level.txt

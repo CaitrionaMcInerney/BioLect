@@ -1,0 +1,66 @@
+-------------------------------------
+----- microBioLect Version 1.1 ------
+-------------------------------------
+Contributors: Jessica S. Blair, Celina Xia
+Tags: NGS, pipeline management, bioinformatics, analysis, DSL, BioLect
+GitHub:
+Contact: jblair22@qub.ac.uk
+Jessica S. Blair (29-10-2018)
+
+
+== Description ==
+microBioLect (microarray Bioinformatics Dialect) is a tool for the simplified and automated definition of a differential gene expression connectivity mapping analysis pipeline (DGECM).
+
+
+
+== Requirements ==
+- Please ensure you have QUADrATiC installed on your system with an instance active before beginning a microBioLect analysis.
+  QUADrATiC can be downloaded from the following link with associated installation documentation (https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1062-1)
+  N.B. microBioLect can carry our differential gene expression analysis without QUADrATiC however will not be able to complete the connectivity mapping analysis.
+- Please ensure you have the R Statistical Language installed (Version 3.4.4 "Someone to Lean On") before using microBioLect.
+- Please ensure you have Python 3 installed before using microBioLect.
+- Please ensure you have Biopython installed within your Python 3 libraries before using microBioLect.
+
+
+== Usage Notes ==
+1. Download from...
+2. Install...
+
+
+== Installation for Development ==
+1. Extract QUADrATiC within your home directory, and follow the QUADrATiC Manual to begin the application
+	Quick start: within terminal, navigate to the QUADrATiC folder, list the contents, run the appropriate bash
+2. Ensure you have Python 3.5.2 installed on your system, along with the latest version of Biopython
+3. Ensure a version of R above 3.3.1 is installed on your machine, and use the following R script to install the packages listed below.
+   Any package dependencies should automatically download
+   - setRepositories() #select a UK one
+     install.packages|() #select all mirrors except the Forge
+     # affy, limma, Biobase, GEOquery, gplots, genefilter, hgu133plus.db
+4. Install and configure Antlr v4.7 Runtime on your machine (see http://www.antlr.org/) or through curl in terminal
+    - cd /usr/local/lib
+      curl -O http://www.antlr.org/download/antlr-4.7-complete.jar
+5. Once Antlr v4.7 is installed, add the following three lines to your bash.rc to ensure Antlr v4.7 runs at boot
+    - gedit ~/.bashrc
+      export CLASSPATH=".:/usr/local/lib/antlr-4.7-complete.jar:$CLASSPATH"
+	  alias antlr4='java -jar /usr/local/lib/antlr-4.7-complete.jar'
+	  alias grun='java org.antlr.v4.gui.TestRig'
+6. In Terminal, type Antlr4 to test runtime. You should see the following if successful
+    - ANTLR Parser Generator  Version 4.5
+        -o ___              specify output directory where all output is generated
+        .......
+7. Extract and open the MicroarrayDSL code into IntelliJ as a Python3 project
+8. In IntelliJ, ensure the Python Community Edition, R Language Support, AntlrWorks, Antlr v4 Grammar Plugin are installed under Settings
+9. For the class ccrcbDSLvisitorImpl.py, create the following configuration
+    -Scripts: <yourdirectory>/microarryDSL/ccrcbDSLVisitorImpl.py
+    -Python Interpreter: set to Python 3.5.2
+    -Working Directory: <yourdirectory>/microarrayDSL
+10. Within IntelliJ Project Structure, ensure the following Dependencies are present
+    -Java 1.8
+    -Python 3.5.2
+    -Antlr-4.7-complete.jar
+    -R User Library
+    -R Skeletons
+11. Run the ccrcbDSLVisitorImpl.py which automatically reads in the test.txt file containing our analysis grammar.
+    Follow the outputs until it states ""
+
+

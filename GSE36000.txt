@@ -1,0 +1,11 @@
+##Test analysis for publication##
+use GEO accession GSE36000 as MCL dataset
+
+use "characteristics_ch1"="ighv status: MUT" to create group mut from MCL dataset
+use "characteristics_ch1"="ighv status: UNMUT" to create group unmut from MCL dataset
+
+calculate differential expression IGHVstatusMCL of mut vs unmut using limma with BH multiple testing correction
+
+use FDR < 0.05 to create gene list microBioLectMCL from IGHVstatusMCL table
+
+find negative connections for gene list microBioLectMCL

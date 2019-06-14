@@ -1,0 +1,8 @@
+antlr4-python3-runtime==4.7.2
+biopython==1.73
+certifi==2019.3.9
+chardet==3.0.4
+idna==2.8
+numpy==1.16.4
+requests==2.22.0
+urllib3==1.25.3

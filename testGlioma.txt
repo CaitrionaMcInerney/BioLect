@@ -1,0 +1,11 @@
+use GEO accession GSE7696 as GEOGlioma dataset
+
+use "characteristics_ch1"="disease status: recurrent GBM" and "characteristics_ch1"="treatment: TMZ/radiotherapy" to create group RecurrentGlio from GEOGlioma dataset
+use "characteristics_ch1"="disease status: GBM" and "characteristics_ch1"="treatment: TMZ/radiotherapy" to create group NonRecurrentGlio from GEOGlioma dataset
+
+calculate differential expression RecVsNonRecGlio of RecurrentGlio vs NonRecurrentGlio using limma with BH multiple testing correction
+
+use FDR < 0.05 to create gene list DSL_Glioma from RecVsNonRecGlio table
+
+find negative connections for gene list DSL_Glioma
+

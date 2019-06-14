@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="R User Library">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file:///usr/local/lib/R" />
+    </SOURCES>
+  </library>
+</component>

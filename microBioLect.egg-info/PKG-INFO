@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: microBioLect
+Version: 0.0.1
+Summary: A natural language syntax domain specific language tool for simple and automated analysis of microarray data
+Home-page: https://github.com/JessBlairQUB/BioLect
+Author: Jessica Blair
+Author-email: jblair22@qub.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: 
+Classifier: Operating System :: Linux
