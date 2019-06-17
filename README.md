@@ -35,6 +35,8 @@ An instance of [QUADrATiC](https://bmcbioinformatics.biomedcentral.com/articles/
     a. The GEO accession number of the dataset you wish to download and analyse
     b. The characteristics from the dataset you wish to compare. These can be found within the series matrix.txt file which can be viewed on the GEO website.
 2. For each new line of the script, press enter
+3. You can create differential groups which group several characteristics. Please see the testGlioma.txt file for an example.
 3. Once you have completed your script, press enter twice and the analysis will begin.
 
 ### Restrictions ###
+Due to restrictions with QUADrATiC, microBioLect is designed to work with datasets obtained from the Affymetrix Human Genome U133 Plus 2.0 Array only.
