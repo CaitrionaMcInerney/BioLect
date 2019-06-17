@@ -19,7 +19,7 @@ Python 3.4
 R
 
 **Other Requirements**
-An instance of [Named Link](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1062-1 "QUADrATiC") installed and running.
+An instance of [QUADrATiC](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1062-1 "QUADrATiC") installed and running.
 
 ### Quick Start Guide ###
 
