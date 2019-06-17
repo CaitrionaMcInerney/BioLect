@@ -11,12 +11,12 @@ This allows for ease of mircoarray analysis for those unfamiliar with programmin
 ### Requirements ###
 
 **Operating Systems**
-Linux Ubuntu 14.04 and upwards
-Mac OS Mojave 10.14 and upwards
+1. Linux Ubuntu 14.04 and upwards
+2. Mac OS Mojave 10.14 and upwards
 
 **Language Requirements**
-Python 3.4
-R
+1. Python 3.4
+2. R
 
 **Other Requirements**
 An instance of [QUADrATiC](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1062-1 "QUADrATiC") installed and running.
