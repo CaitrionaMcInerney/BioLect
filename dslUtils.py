@@ -269,6 +269,41 @@ def create_gene_lists(differential_expression, filter_expr):
     return up_list_probes, down_list_probes
     print("...Gene lists created")
 
+def compileResults():
+    print("Compiling Differential Expression Results...")
+    userhome = os.path.expanduser('~')
+    desktop = userhome + '/Desktop/'
+    name = "RecVsNonRecGlioma"
+    results = (desktop + 'microBioLect - ' + name)
+    results2 = (results+"2")
+    if os.path.isdir(results):
+        print("This analysis has been performed before")
+        print("Would you like to overwrite your previous results?")
+        ow = input("y or n: ")
+        if ow == "y":
+            shutil.rmtree(results)
+            os.makedirs(results)
+        elif ow == "n":
+            os.makedirs(results2)
+            results = results2
+        else:
+            print("Invalid input, please enter y or n")
+            compileResults()
+    else:
+        os.makedirs(results)
+    decsv = ("/tmp/" + name + "_de.csv")
+    allcsv = ("/tmp/" + name + ".csv")
+    volcanopng = ("/tmp/" + name + "_volcano.png")
+    heatpng = ("/tmp/" + name + "_heatmap.png")
+    try:
+        shutil.move(decsv, results)
+        shutil.move(allcsv, results)
+        shutil.move(volcanopng, results)
+        shutil.move(heatpng, results)
+    except FileNotFoundError:
+        print("One of the results files is missing")
+
+    return [desktop, name, results]
 
 
 # Connecting to QUADrATiC to carry out Connectivity Map Analysis
@@ -313,28 +348,8 @@ def create_connection_lists(connection_list, gene_list):
     print("QUADrATiC Analysis Complete")
     print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3])
 
-def results_dir(series):
-    print("Compiling Results...")
-    userhome = os.path.expanduser('~')
-    desktop = userhome + '/Desktop/'
-    try:
-        os.makedirs(desktop +'MicroDSLResults')
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-           raise
-    results = (desktop+'MicroDSLResults')
-    decsv = ("/tmp/"+series+"_de.csv")
-    allcsv = ("/tmp/"+series+"_all.csv")
-    volcanopng = ("/tmp/"+series+"_volcano.png")
-    heatpng = ("/tmp/"+series+"_heatmap.png")
-    shutil.move(decsv, results)
-    shutil.move(allcsv, results)
-    shutil.move(volcanopng, results)
-    shutil.move(heatpng, results)
 
-    #open(results)
-
-    print("Results can be found on Desktop in MicroDSLResults")
+    print("Results can be found on Desktop in anlaysis specific microBioLect folder")
     print("MicroarrayDSL Analysis Complete!")
     print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3])
 
