@@ -6,7 +6,7 @@
 
 **About**
 microBioLect is a domain specific language (DSL) designed to be as close to natural spoken syntax as possible.
-This allows for ease of mircoarray analysis for those unfamiliar with programming while improving repeatability of anlyses.
+This allows for ease of mircoarray analysis for those unfamiliar with programming while improving repeatability of analyses.
 
 ### Requirements ###
 
