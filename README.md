@@ -2,7 +2,7 @@
 
 ## microBioLect for Microarray Differential Gene Expression Analysis ##
 
-### * Early Version Terminal Tool (Docker Version coming soon!) * ###
+### * Early Version Terminal Tool * ###
 
 **About**
 microBioLect is a domain specific language (DSL) designed to be as close to natural spoken syntax as possible.
