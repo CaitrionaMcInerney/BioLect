@@ -24,11 +24,11 @@ An instance of [QUADrATiC](https://bmcbioinformatics.biomedcentral.com/articles/
 ### Quick Start Guide ###
 
 **Installation**
-1. From the 'dist'folder, download the microBioLect-0.0.1.tar.gz file
-2. Download the microBioLect.sh file
+1. Download the microBioLect.sh file
+2. From the 'dist'folder, download the microBioLect-0.0.1.tar.gz file
 3. Place both of these files within the same directory
-4. From the terminal, navigate using the cd command to the directory containing microBioLect
-5. initialise microBioLect with the following command './microBioLect.sh'
+4. Open a command line window and navigate to the directory containing the microBioLect files
+5. Initialise microBioLect with the following command './microBioLect.sh'
 
 **Writing a microBioLect Script**
 1. Within the terminal, write your microBioLect Script. You will need to know the following:
